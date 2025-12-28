@@ -175,9 +175,11 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-22.04]
-        arch: [armhf, arm64]
+        arch: [armel, armhf, arm64]
         feat: [rtlsdr, soapysdr]
         include:
+          - arch: armel
+            compiler: arm-linux-gnueabi
           - arch: armhf
             compiler: arm-linux-gnueabihf
           - arch: arm64
